@@ -12,7 +12,8 @@ export default function TabLayout() {
     <Tabs
       screenOptions={{
         tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
-        headerShown: false,
+        headerShown: true,
+        headerTitleAlign: "center"
       }}>
       <Tabs.Screen
         name="index"
@@ -24,7 +25,7 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="explore"
+        name="explore/index"
         options={{
           title: 'Explore',
           tabBarIcon: ({ color, focused }) => (
