@@ -1,11 +1,11 @@
+//commiting for resolving git issue
 import React, { useState } from "react"
 import {
   View,
   Text,
   TextInput,
   StyleSheet,
-  TouchableOpacity,
-  TouchableOpacityProps,
+  TouchableOpacity
 } from "react-native"
 import CustomText from "@/components/ui/CustomText"
 import { CountryPicker } from "react-native-country-codes-picker"
