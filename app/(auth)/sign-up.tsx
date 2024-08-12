@@ -10,7 +10,7 @@ import CustomText from "@/components/ui/CustomText"
 import PrimaryButton from "@/components/ui/PrimaryButton"
 import Colors from "@/constants/Colors"
 import { Ionicons } from "@expo/vector-icons"
-import { Link } from "expo-router"
+import { Link, router } from "expo-router"
 
 const SignupTab = () => {
   const { width } = useWindowDimensions()
@@ -30,8 +30,8 @@ const SignupTab = () => {
         </CustomText>
 
         <View style={{ justifyContent: "space-between", marginTop: 70 }}>
-          {/* <Link href="/home" asChild> */}
           <PrimaryButton
+            onPress={() => router.push("/register")}
             text="Continue With Phone Number"
             buttonStyle={styles.phoneButton}
           />
@@ -63,20 +63,27 @@ const SignupTab = () => {
               </Link>
             </CustomText>
           </View>
-
+        </View>
+        <View style={{
+              position: "absolute",
+              bottom: 20,
+              left: 0,
+              right: 0,
+              alignItems: "center",
+              padding: 15
+        }}>
           <CustomText
             style={{
               textAlign: "center",
               color: "gray",
-              fontSize: 13,
-              top: 80,
+              fontSize: 13
             }}
           >
             By signing up or logging in, i accept the apps{" "}
             <Text style={{ color: Colors.primary }}>Terms of Service</Text> and{" "}
             <Text style={{ color: Colors.primary }}>Privacy Policy</Text>
           </CustomText>
-        </View>
+          </View>
       </View>
     </View>
   )

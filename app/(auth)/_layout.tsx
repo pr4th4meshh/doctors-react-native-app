@@ -1,6 +1,6 @@
-import { Ionicons } from "@expo/vector-icons";
-import { Stack } from "expo-router";
-import { StatusBar } from "expo-status-bar";
+import { Ionicons } from "@expo/vector-icons"
+import { Stack } from "expo-router"
+import { StatusBar } from "expo-status-bar"
 
 const AuthLayout = () => {
   return (
@@ -10,7 +10,7 @@ const AuthLayout = () => {
           name="sign-in"
           options={{
             headerShown: true,
-            headerTitle: ""
+            headerTitle: "",
           }}
         />
         <Stack.Screen
@@ -19,9 +19,16 @@ const AuthLayout = () => {
             headerShown: false,
           }}
         />
+        <Stack.Screen
+          name="register"
+          options={{
+            headerShown: true,
+            headerTitle: ""
+          }}
+        />
       </Stack>
     </>
-  );
-};
+  )
+}
 
-export default AuthLayout;
+export default AuthLayout

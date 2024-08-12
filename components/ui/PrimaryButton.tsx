@@ -9,11 +9,12 @@ interface PrimaryButtonProps {
     buttonStyle?: object;
     icon?: React.ReactNode;
     onPress?: () => void
+    disabled?: boolean
 }
 
-const PrimaryButton = ({ text, textStyle, buttonStyle, icon, onPress }: PrimaryButtonProps) => {
+const PrimaryButton = ({ text, textStyle, buttonStyle, icon, onPress, disabled }: PrimaryButtonProps) => {
   return (
-    <TouchableOpacity onPress={onPress} style={[styles.buttonStyle, buttonStyle]}>
+    <TouchableOpacity disabled={disabled} onPress={onPress} style={[styles.buttonStyle, buttonStyle]}>
       <View style={styles.contentContainer}>
         {icon && (
           <View style={styles.iconContainer}>
@@ -37,6 +38,7 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     justifyContent: 'center',
     alignItems: 'center',
+    width: "100%"
   },
   contentContainer: {
     flexDirection: 'row',
