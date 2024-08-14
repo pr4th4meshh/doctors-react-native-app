@@ -50,6 +50,7 @@ const Register = () => {
             keyboardType="numeric"
             accessibilityLabel="Enter your phone number"
             maxLength={10}
+            autoFocus={true}
           />
         </View>
         <CountryPicker
@@ -65,7 +66,7 @@ const Register = () => {
       <View style={styles.bottomContainer}>
         <PrimaryButton
           disabled={disabled}
-          onPress={() => router.push("/(screens)/welcome")}
+          onPress={() => router.push("/welcome")}
           text="Continue"
           buttonStyle={[
             styles.button,
