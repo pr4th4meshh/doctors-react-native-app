@@ -1,3 +1,5 @@
+import iconSet from "@expo/vector-icons/build/Fontisto"
+
 export const ActionsCardData = [
   {
     id: "1",
@@ -33,5 +35,34 @@ export const InformationCardData = [
   {
     id: "2",
     title: "Prevent the spread of COVID-19 Virus",
+  },
+]
+
+export const Categories = [
+  {
+    id: "1",
+    icon: "👂🏻",
+    title: "Ear, Nose & Throat"
+  },
+  {
+    id: "2",
+    icon: "🧠",
+    title: "Psychiatrist"
+  },  {
+    id: "3",
+    icon: "🦷",
+    title: "Dentist"
+  },  {
+    id: "4",
+    icon: "🤌",
+    title: "Dermato-veneorologis"
+  },  {
+    id: "5",
+    icon: "🤧",
+    title: "Cold & Cough"
+  },  {
+    id: "6",
+    icon: "👧",
+    title: "Menstrual Consulting"
   },
 ]

@@ -10,6 +10,7 @@ import { ActionsCardData, InformationCardData } from "@/constants/Data"
 import { FlatGrid } from "react-native-super-grid"
 import InformationCard from "@/components/ui/InfomationCard"
 import { ScrollView } from "react-native-reanimated/lib/typescript/Animated"
+import { Link } from "expo-router"
 
 const Home = () => {
   const username = "Prathamesh"
@@ -41,12 +42,14 @@ const Home = () => {
           spacing={16}
           itemDimension={164}
           renderItem={({ item }) => (
-            <ActionCard
-              cardId={item.id}
-              icon={item.icon}
-              title={item.title}
-              description={item.description}
-            />
+            <Link href={"/(pages)/book-appointment"}>
+              <ActionCard
+                cardId={item.id}
+                icon={item.icon}
+                title={item.title}
+                description={item.description}
+              />
+            </Link>
           )}
           keyExtractor={(item) => item.id}
         />
@@ -54,17 +57,14 @@ const Home = () => {
 
       {/* Information cards */}
       <View style={styles.informationCardContainer}>
-      <FlatList
-        data={InformationCardData}
-        horizontal
-        showsHorizontalScrollIndicator={false}
-        renderItem={({ item }) => (
-          <InformationCard
-            cardId={item.id}
-            title={item.title}
-          />
-        )}
-      />
+        <FlatList
+          data={InformationCardData}
+          horizontal
+          showsHorizontalScrollIndicator={false}
+          renderItem={({ item }) => (
+            <InformationCard cardId={item.id} title={item.title} />
+          )}
+        />
       </View>
     </SafeAreaView>
   )
@@ -75,7 +75,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    padding: 16
+    padding: 16,
   },
   iconStyle: {
     backgroundColor: "#f9fafb",
@@ -87,11 +87,11 @@ const styles = StyleSheet.create({
   },
   actionCardsContainer: {
     padding: 16,
-    marginHorizontal: -16
+    marginHorizontal: -16,
   },
   informationCardContainer: {
     // paddingHorizontal: 10
-  }
+  },
 })
 
 export default Home
