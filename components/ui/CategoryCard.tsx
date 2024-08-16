@@ -1,19 +1,40 @@
-import { View, Text, StyleSheet, Image } from "react-native"
+import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native"
 import React from "react"
 import CustomText from "./CustomText"
 import { Ionicons } from "@expo/vector-icons"
 import Colors from "@/constants/Colors"
+import { NavigationProp, useNavigation } from "@react-navigation/native"
 
 interface ICard {
-    id: string
-    icon: string
-    title: string
+  id: string
+  icon: string
+  title: string
 }
 
-const CategoryCard = ({id, icon, title}: ICard) => {
+type RootStackParamList = {
+  Categories: undefined
+  "doctors-list": { categoryId: string; categoryTitle: string }
+}
+
+const CategoryCard = ({ id, icon, title }: ICard) => {
+  const navigation = useNavigation<NavigationProp<RootStackParamList>>()
+
+  const handlePress = () => {
+    navigation.navigate("doctors-list", {
+      categoryId: id,
+      categoryTitle: title,
+    })
+  }
   return (
-    <View key={id} style={styles.cardContainer}>
-      <View style={{ paddingBottom: 0, gap: 12, flexDirection: "row", alignItems: "center" }}>
+    <TouchableOpacity onPress={handlePress} key={id} style={styles.cardContainer}>
+      <View
+        style={{
+          paddingBottom: 0,
+          gap: 12,
+          flexDirection: "row",
+          alignItems: "center",
+        }}
+      >
         <Text
           style={{
             fontSize: 36,
@@ -21,12 +42,14 @@ const CategoryCard = ({id, icon, title}: ICard) => {
             borderRadius: 30,
             borderWidth: 1,
             borderColor: "gray",
-            padding: 4
+            padding: 4,
           }}
-        >{icon}</Text>
+        >
+          {icon}
+        </Text>
 
         <View style={{ flexDirection: "column", gap: 4 }}>
-          <CustomText style={{ fontSize: 18, fontWeight: "bold" }}>
+          <CustomText style={{ fontSize: 18 }}>
             {title}
           </CustomText>
           <CustomText style={{ fontSize: 14, color: "#939396" }}>
@@ -35,8 +58,11 @@ const CategoryCard = ({id, icon, title}: ICard) => {
         </View>
       </View>
 
-      <Ionicons name="chevron-forward-outline" style={{ fontSize: 24, color: Colors.primary }} />
-    </View>
+      <Ionicons
+        name="chevron-forward-outline"
+        style={{ fontSize: 24, color: Colors.primary }}
+      />
+    </TouchableOpacity>
   )
 }
 
@@ -48,7 +74,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     paddingHorizontal: 15,
     justifyContent: "space-between",
-    marginBottom: 4
+    marginBottom: 4,
   },
 })
 

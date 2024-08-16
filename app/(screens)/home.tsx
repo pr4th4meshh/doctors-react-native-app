@@ -32,7 +32,7 @@ const Home = () => {
       {/* end of header container */}
 
       {/* Search for things  */}
-      <SearchInput />
+      <SearchInput placeholder="symptoms, diseases..." />
 
       {/* Action cards */}
       <View style={styles.actionCardsContainer}>
@@ -86,7 +86,8 @@ const styles = StyleSheet.create({
     borderColor: "gray",
   },
   actionCardsContainer: {
-    padding: 16,
+    paddingHorizontal: 16,
+    paddingBottom: 12,
     marginHorizontal: -16,
   },
   informationCardContainer: {

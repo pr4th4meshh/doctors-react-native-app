@@ -42,27 +42,92 @@ export const Categories = [
   {
     id: "1",
     icon: "👂🏻",
-    title: "Ear, Nose & Throat"
+    title: "Ear, Nose & Throat",
   },
   {
     id: "2",
     icon: "🧠",
-    title: "Psychiatrist"
-  },  {
+    title: "Psychiatrist",
+  },
+  {
     id: "3",
     icon: "🦷",
-    title: "Dentist"
-  },  {
+    title: "Dentist",
+  },
+  {
     id: "4",
     icon: "🤌",
-    title: "Dermato-veneorologis"
-  },  {
+    title: "Dermato-veneorologis",
+  },
+  {
     id: "5",
     icon: "🤧",
-    title: "Cold & Cough"
-  },  {
+    title: "Cold & Cough",
+  },
+  {
     id: "6",
     icon: "👧",
-    title: "Menstrual Consulting"
+    title: "Menstrual Consulting",
+  },
+  {
+    id: "7",
+    icon: "👧",
+    title: "Menstrual Consulting",
+  },
+  {
+    id: "8",
+    icon: "👧",
+    title: "Menstrual Consulting",
+  },
+]
+
+export const DoctorsData = [
+  {
+    id: "1",
+    avatar: "🧑‍⚕️",
+    name: "Dr. John Smith",
+    category: "Ear, Nose & Throat",
+    price: 50,
+    ratings: 4.5,
+  },
+  {
+    id: "2",
+    avatar: "🧑‍⚕️",
+    name: "Dr. Sarah Johnson",
+    category: "Psychiatrist",
+    price: 100,
+    ratings: 4.8,
+  },
+  {
+    id: "3",
+    avatar: "🧑‍⚕️",
+    name: "Dr. Emily Davis",
+    category: "Dentist",
+    price: 75,
+    ratings: 4.7,
+  },
+  {
+    id: "4",
+    avatar: "🧑‍⚕️",
+    name: "Dr. Michael Brown",
+    category: "Dermato-veneorologis",
+    price: 80,
+    ratings: 4.6,
+  },
+  {
+    id: "5",
+    avatar: "🧑‍⚕️",
+    name: "Dr. Olivia Martinez",
+    category: "Cold & Cough",
+    price: 40,
+    ratings: 4.4,
+  },
+  {
+    id: "6",
+    avatar: "🧑‍⚕️",
+    name: "Dr. Linda Williams",
+    category: "Menstrual Consulting",
+    price: 60,
+    ratings: 4.9,
   },
 ]

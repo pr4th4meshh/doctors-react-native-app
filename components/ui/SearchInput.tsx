@@ -3,13 +3,17 @@ import React from 'react'
 import Colors from '@/constants/Colors'
 import { Ionicons } from '@expo/vector-icons'
 
-const SearchInput = () => {
+type Placeholder = {
+  placeholder: string
+}
+
+const SearchInput = ({placeholder}: Placeholder) => {
   return (
     <View style={styles.inputContainer}>
     <TouchableOpacity style={styles.searchIconStyle}>
       <Ionicons style={{ fontSize: 24, color: "white" }} name={"search-outline"} />
     </TouchableOpacity>
-    <TextInput style={styles.input} placeholder="symptoms, diseases .." />
+    <TextInput style={styles.input} placeholder={placeholder} />
   </View>
   )
 }
@@ -30,6 +34,7 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "space-between",
         marginTop: 16,
+        marginBottom: 12,
         width: "100%",
         paddingHorizontal: 16
       },
