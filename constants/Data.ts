@@ -84,50 +84,314 @@ export const Categories = [
 export const DoctorsData = [
   {
     id: "1",
-    avatar: "🧑‍⚕️",
+    avatar: "❤️",
     name: "Dr. John Smith",
     category: "Ear, Nose & Throat",
     price: 50,
     ratings: 4.5,
+    address:
+      "Jl. Tangkuban Perahu No.31-33, Kauman, Kec. Klojen, Kota Malang, Jawa Timur 65119",
+    biography:
+      "Dr. Patricia Ahoy specialist in Ear, Nose & Throat, and work in RS. Hermina Malang. It is a long established fact that a reader will be distracted by the readable content.",
+    latitude: 19.131365054649812,
+    longitude: 72.82505226734318,
+    reviews: [
+      {
+        id: "1",
+        avatar: "👧",
+        name: "Indah julaiha",
+        starRatings: "4.5",
+        review:
+          " There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour",
+        postedOn: "1 Weeks ago",
+      },
+      {
+        id: "2",
+        avatar: "👧",
+        name: "Indah julaiha",
+        starRatings: "4.5",
+        review:
+          " There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour",
+        postedOn: "1 Weeks ago",
+      },
+      {
+        id: "3",
+        avatar: "👧",
+        name: "Indah julaiha",
+        starRatings: "4.5",
+        review:
+          " There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour",
+        postedOn: "1 Weeks ago",
+      },
+      {
+        id: "4",
+        avatar: "👧",
+        name: "Indah julaiha",
+        starRatings: "4.5",
+        review:
+          " There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour",
+        postedOn: "1 Weeks ago",
+      },
+    ],
   },
   {
     id: "2",
-    avatar: "🧑‍⚕️",
+    avatar: "❤️",
     name: "Dr. Sarah Johnson",
     category: "Psychiatrist",
     price: 100,
     ratings: 4.8,
+    address:
+      "Jl. Tangkuban Perahu No.31-33, Kauman, Kec. Klojen, Kota Malang, Jawa Timur 65119",
+    biography:
+      "Dr. Patricia Ahoy specialist in Ear, Nose & Throat, and work in RS. Hermina Malang. It is a long established fact that a reader will be distracted by the readable content.",
+    latitude: 19.131365054649812,
+    longitude: 72.82505226734318,
+    reviews: [
+      {
+        id: "1",
+        avatar: "👧",
+        name: "Indah julaiha",
+        starRatings: "4.5",
+        review:
+          " There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour",
+        postedOn: "1 Weeks ago",
+      },
+      {
+        id: "2",
+        avatar: "👧",
+        name: "Indah julaiha",
+        starRatings: "4.5",
+        review:
+          " There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour",
+        postedOn: "1 Weeks ago",
+      },
+      {
+        id: "3",
+        avatar: "👧",
+        name: "Indah julaiha",
+        starRatings: "4.5",
+        review:
+          " There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour",
+        postedOn: "1 Weeks ago",
+      },
+      {
+        id: "4",
+        avatar: "👧",
+        name: "Indah julaiha",
+        starRatings: "4.5",
+        review:
+          " There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour",
+        postedOn: "1 Weeks ago",
+      },
+    ],
   },
   {
     id: "3",
-    avatar: "🧑‍⚕️",
+    avatar: "❤️",
     name: "Dr. Emily Davis",
     category: "Dentist",
     price: 75,
     ratings: 4.7,
+    address:
+      "Jl. Tangkuban Perahu No.31-33, Kauman, Kec. Klojen, Kota Malang, Jawa Timur 65119",
+    biography:
+      "Dr. Patricia Ahoy specialist in Ear, Nose & Throat, and work in RS. Hermina Malang. It is a long established fact that a reader will be distracted by the readable content.",
+    latitude: 19.131365054649812,
+    longitude: 72.82505226734318,
+    reviews: [
+      {
+        id: "1",
+        avatar: "👧",
+        name: "Indah julaiha",
+        starRatings: "4.5",
+        review:
+          " There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour",
+        postedOn: "1 Weeks ago",
+      },
+      {
+        id: "2",
+        avatar: "👧",
+        name: "Indah julaiha",
+        starRatings: "4.5",
+        review:
+          " There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour",
+        postedOn: "1 Weeks ago",
+      },
+      {
+        id: "3",
+        avatar: "👧",
+        name: "Indah julaiha",
+        starRatings: "4.5",
+        review:
+          " There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour",
+        postedOn: "1 Weeks ago",
+      },
+      {
+        id: "4",
+        avatar: "👧",
+        name: "Indah julaiha",
+        starRatings: "4.5",
+        review:
+          " There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour",
+        postedOn: "1 Weeks ago",
+      },
+    ],
   },
   {
     id: "4",
-    avatar: "🧑‍⚕️",
+    avatar: "❤️",
     name: "Dr. Michael Brown",
     category: "Dermato-veneorologis",
     price: 80,
     ratings: 4.6,
+    address:
+      "Jl. Tangkuban Perahu No.31-33, Kauman, Kec. Klojen, Kota Malang, Jawa Timur 65119",
+    biography:
+      "Dr. Patricia Ahoy specialist in Ear, Nose & Throat, and work in RS. Hermina Malang. It is a long established fact that a reader will be distracted by the readable content.",
+    latitude: 19.131365054649812,
+    longitude: 72.82505226734318,
+    reviews: [
+      {
+        id: "1",
+        avatar: "👧",
+        name: "Indah julaiha",
+        starRatings: "4.5",
+        review:
+          " There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour",
+        postedOn: "1 Weeks ago",
+      },
+      {
+        id: "2",
+        avatar: "👧",
+        name: "Indah julaiha",
+        starRatings: "4.5",
+        review:
+          " There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour",
+        postedOn: "1 Weeks ago",
+      },
+      {
+        id: "3",
+        avatar: "👧",
+        name: "Indah julaiha",
+        starRatings: "4.5",
+        review:
+          " There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour",
+        postedOn: "1 Weeks ago",
+      },
+      {
+        id: "4",
+        avatar: "👧",
+        name: "Indah julaiha",
+        starRatings: "4.5",
+        review:
+          " There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour",
+        postedOn: "1 Weeks ago",
+      },
+    ],
   },
   {
     id: "5",
-    avatar: "🧑‍⚕️",
+    avatar: "❤️",
     name: "Dr. Olivia Martinez",
     category: "Cold & Cough",
     price: 40,
     ratings: 4.4,
+    address:
+      "Jl. Tangkuban Perahu No.31-33, Kauman, Kec. Klojen, Kota Malang, Jawa Timur 65119",
+    biography:
+      "Dr. Patricia Ahoy specialist in Ear, Nose & Throat, and work in RS. Hermina Malang. It is a long established fact that a reader will be distracted by the readable content.",
+    latitude: 19.131365054649812,
+    longitude: 72.82505226734318,
+    reviews: [
+      {
+        id: "1",
+        avatar: "👧",
+        name: "Indah julaiha",
+        starRatings: "4.5",
+        review:
+          " There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour",
+        postedOn: "1 Weeks ago",
+      },
+      {
+        id: "2",
+        avatar: "👧",
+        name: "Indah julaiha",
+        starRatings: "4.5",
+        review:
+          " There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour",
+        postedOn: "1 Weeks ago",
+      },
+      {
+        id: "3",
+        avatar: "👧",
+        name: "Indah julaiha",
+        starRatings: "4.5",
+        review:
+          " There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour",
+        postedOn: "1 Weeks ago",
+      },
+      {
+        id: "4",
+        avatar: "👧",
+        name: "Indah julaiha",
+        starRatings: "4.5",
+        review:
+          " There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour",
+        postedOn: "1 Weeks ago",
+      },
+    ],
   },
   {
     id: "6",
-    avatar: "🧑‍⚕️",
+    avatar: "❤️",
     name: "Dr. Linda Williams",
     category: "Menstrual Consulting",
     price: 60,
     ratings: 4.9,
+    address:
+      "Jl. Tangkuban Perahu No.31-33, Kauman, Kec. Klojen, Kota Malang, Jawa Timur 65119",
+    biography:
+      "Dr. Patricia Ahoy specialist in Ear, Nose & Throat, and work in RS. Hermina Malang. It is a long established fact that a reader will be distracted by the readable content.",
+    latitude: 19.131365054649812,
+    longitude: 72.82505226734318,
+    reviews: [
+      {
+        id: "1",
+        avatar: "👧",
+        name: "Indah julaiha",
+        starRatings: "4.5",
+        review:
+          " There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour",
+        postedOn: "1 Weeks ago",
+      },
+      {
+        id: "2",
+        avatar: "👧",
+        name: "Indah julaiha",
+        starRatings: "4.5",
+        review:
+          " There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour",
+        postedOn: "1 Weeks ago",
+      },
+      {
+        id: "3",
+        avatar: "👧",
+        name: "Indah julaiha",
+        starRatings: "4.5",
+        review:
+          " There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour",
+        postedOn: "1 Weeks ago",
+      },
+      {
+        id: "4",
+        avatar: "👧",
+        name: "Indah julaiha",
+        starRatings: "4.5",
+        review:
+          " There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour",
+        postedOn: "1 Weeks ago",
+      },
+    ],
   },
 ]

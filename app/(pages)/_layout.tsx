@@ -1,9 +1,5 @@
 import { Stack } from "expo-router"
 
-type DoctorsListRouteParams = {
-  categoryTitle?: string
-}
-
 const PagesLayout = () => {
   return (
     <>
@@ -25,6 +21,15 @@ const PagesLayout = () => {
             headerTitleAlign: "center",
             headerTitleStyle: { fontFamily: "Manrope" },
           })}
+        />
+                <Stack.Screen
+          name="about-doctor"
+          options={{
+            headerShown: true,
+            headerTitle: "About the Doctor",
+            headerTitleAlign: "center",
+            headerTitleStyle: { fontFamily: "Manrope" },
+          }}
         />
       </Stack>
     </>

@@ -1,8 +1,7 @@
-import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native"
+import { View, Text, StyleSheet, TouchableOpacity } from "react-native"
 import React from "react"
 import CustomText from "./CustomText"
 import { Ionicons } from "@expo/vector-icons"
-import Colors from "@/constants/Colors"
 import { NavigationProp, useNavigation } from "@react-navigation/native"
 
 interface ICard {
@@ -15,8 +14,8 @@ interface ICard {
 }
 
 type RootStackParamList = {
-  Categories: undefined
-  "doctors-list": { categoryId: string; categoryTitle: string }
+  Doctors: undefined
+  "about-doctor": { doctorId: string }
 }
 
 const DoctorInformationCard = ({
@@ -30,13 +29,12 @@ const DoctorInformationCard = ({
   const navigation = useNavigation<NavigationProp<RootStackParamList>>()
 
   const handlePress = () => {
-    navigation.navigate("doctors-list", {
-      categoryId: id,
-      categoryTitle: title,
+    navigation.navigate("about-doctor", {
+      doctorId: id,
     })
   }
   return (
-    <TouchableOpacity key={id} style={styles.cardContainer}>
+    <TouchableOpacity onPress={handlePress} key={id} style={styles.cardContainer}>
       <View style={styles.iconContainer}>
         <Text style={styles.iconStyle}>{icon}</Text>
 
