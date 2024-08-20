@@ -40,6 +40,15 @@ const PagesLayout = () => {
             headerTitleStyle: { fontFamily: "Manrope" },
           }}
         />
+        <Stack.Screen
+          name="payment"
+          options={{
+            headerShown: true,
+            headerTitle: "Payment",
+            headerTitleAlign: "center",
+            headerTitleStyle: { fontFamily: "Manrope" },
+          }}
+        />
       </Stack>
     </>
   )

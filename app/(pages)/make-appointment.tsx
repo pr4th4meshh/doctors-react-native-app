@@ -1,6 +1,6 @@
 import { View, Text, FlatList, TouchableOpacity } from "react-native"
 import React, { useState } from "react"
-import { RouteProp, useRoute } from "@react-navigation/native"
+import { RouteProp, useNavigation, useRoute } from "@react-navigation/native"
 import { DoctorsData } from "@/constants/Data"
 import CustomText from "@/components/ui/CustomText"
 import { CalendarList } from "react-native-calendars"
@@ -9,7 +9,7 @@ import PrimaryButton from "@/components/ui/PrimaryButton"
 
 type RootStackParamList = {
   "make-appointment": {
-    doctor: { name: string }
+    doctor: { name: string; id: string }
   }
 }
 
@@ -25,6 +25,15 @@ const MakeAppointment = () => {
     afternoon: ["18:00", "19:00", "20:00"],
   }
 
+  const navigation = useNavigation()
+  const handlePress = () => {
+    navigation.navigate("payment", {
+      appointmentDate: selectedDate,
+      appointmentTime: selectedTime,
+      doctorId: doctor.id,
+    })
+  }
+
   return (
     <View style={{ flex: 1, backgroundColor: "white" }}>
       <View style={{ padding: 15 }}>
@@ -32,7 +41,8 @@ const MakeAppointment = () => {
           Select your visit date & time
         </CustomText>
         <CustomText style={{ fontSize: 14, color: "gray" }}>
-          You can choose the date and time from the available {doctor.name}'s schedule
+          You can choose the date and time from the available {doctor.name}'s
+          schedule
         </CustomText>
       </View>
 
@@ -118,17 +128,20 @@ const MakeAppointment = () => {
           <Text style={{ marginTop: 20 }}>Please select a date first.</Text>
         )}
       </View>
-      <View
-        style={{
-          backgroundColor: "white",
-          position: "absolute",
-          bottom: 0,
-          width: "100%",
-          padding: 10,
-        }}
-      >
-        <PrimaryButton text="Make Appointment" />
-      </View>
+
+      {selectedDate && selectedTime ? (
+        <View
+          style={{
+            backgroundColor: "white",
+            position: "absolute",
+            bottom: 0,
+            width: "100%",
+            padding: 10,
+          }}
+        >
+          <PrimaryButton onPress={handlePress} text="Confirm" />
+        </View>
+      ) : null}
     </View>
   )
 }
