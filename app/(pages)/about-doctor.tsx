@@ -7,7 +7,7 @@ import {
 } from "react-native"
 import React, { useState } from "react"
 import { DoctorsData } from "@/constants/Data"
-import { useRoute, RouteProp } from "@react-navigation/native"
+import { useRoute, RouteProp, useNavigation, NavigationProp } from "@react-navigation/native"
 import AboutDoctorCard from "@/components/ui/AboutDoctorCard"
 import CustomText from "@/components/ui/CustomText"
 import MapComponent from "@/components/ui/LocationMap"
@@ -20,6 +20,11 @@ type RootStackParamList = {
   }
 }
 
+type RootStackParamListNavigation = {
+  doctor: null
+  "make-appointment": { doctorId: string, doctorName: string }
+}
+
 const AboutDoctorScreen = () => {
   const [visibleCount, setVisibleCount] = useState(3)
   const route = useRoute<RouteProp<RootStackParamList, "about-doctor">>()
@@ -29,6 +34,12 @@ const AboutDoctorScreen = () => {
 
   const loadMoreReviews = () => {
     setVisibleCount((prev) => prev + 3)
+  }
+
+  const navigation = useNavigation()
+  const handlePress = () => {
+    const selectedDoctor = DoctorsData.filter((doctor) => doctor.id === doctorId)[0];
+    navigation.navigate<NavigationProp<RootStackParamListNavigation>>("make-appointment", { doctor: selectedDoctor });
   }
 
   return (
@@ -115,7 +126,7 @@ const AboutDoctorScreen = () => {
         )}
       />
       <View style={styles.bottomBar}>
-        <PrimaryButton text="Make Appointment"></PrimaryButton>
+        <PrimaryButton onPress={handlePress} text="Make Appointment"/>
       </View>
     </View>
   )

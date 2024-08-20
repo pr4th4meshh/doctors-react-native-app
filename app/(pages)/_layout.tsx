@@ -22,11 +22,20 @@ const PagesLayout = () => {
             headerTitleStyle: { fontFamily: "Manrope" },
           })}
         />
-                <Stack.Screen
+        <Stack.Screen
           name="about-doctor"
           options={{
             headerShown: true,
             headerTitle: "About the Doctor",
+            headerTitleAlign: "center",
+            headerTitleStyle: { fontFamily: "Manrope" },
+          }}
+        />
+        <Stack.Screen
+          name="make-appointment"
+          options={{
+            headerShown: true,
+            headerTitle: "Make Appointment",
             headerTitleAlign: "center",
             headerTitleStyle: { fontFamily: "Manrope" },
           }}
