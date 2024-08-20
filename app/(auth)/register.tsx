@@ -1,30 +1,38 @@
-import React, { useState } from "react"
+import React, { useState } from "react";
 import {
   View,
   Text,
   TextInput,
   StyleSheet,
   TouchableOpacity,
-} from "react-native"
-import CustomText from "@/components/ui/CustomText"
-import { CountryPicker } from "react-native-country-codes-picker"
-import PrimaryButton from "@/components/ui/PrimaryButton"
-import Colors from "@/constants/Colors"
-import { useRouter } from "expo-router"
+} from "react-native";
+import CustomText from "@/components/ui/CustomText";
+import { CountryPicker } from "react-native-country-codes-picker";
+import PrimaryButton from "@/components/ui/PrimaryButton";
+import Colors from "@/constants/Colors";
+import { useRouter } from "expo-router";
 
 const Register = () => {
-  const [phoneNumber, setPhoneNumber] = useState("")
-  const [show, setShow] = useState(false)
-  const [countryCode, setCountryCode] = useState("+91")
-  const router = useRouter()
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [show, setShow] = useState(false);
+  const [countryCode, setCountryCode] = useState("+91");
+  const router = useRouter();
 
-  const handleCountryPicker = () => setShow(true)
-  const handlePickerClose = () => setShow(false)
+  const handleCountryPicker = () => setShow(true);
+  const handlePickerClose = () => setShow(false);
   const handleCountrySelection = (item: any) => {
-    setCountryCode(item.dial_code)
-    handlePickerClose()
-  }
-  const disabled = phoneNumber.length !== 10
+    setCountryCode(item.dial_code);
+    handlePickerClose();
+  };
+
+  const handlePhoneNumberChange = (text: string) => {
+   // regex for numbers only input
+    const numericText = text.replace(/[^0-9]/g, "");
+    setPhoneNumber(numericText);
+  };
+
+  const disabled = phoneNumber.length !== 10;
+
   return (
     <View style={styles.container}>
       <CustomText style={styles.title}>Register</CustomText>
@@ -44,9 +52,9 @@ const Register = () => {
           </TouchableOpacity>
           <TextInput
             style={styles.input}
-            onChangeText={setPhoneNumber}
+            onChangeText={handlePhoneNumberChange}
             value={phoneNumber}
-            placeholder="eg: 923-2342-234"
+            placeholder="eg: 9232342234"
             keyboardType="numeric"
             accessibilityLabel="Enter your phone number"
             maxLength={10}
@@ -80,8 +88,8 @@ const Register = () => {
         </CustomText>
       </View>
     </View>
-  )
-}
+  );
+};
 
 const styles = StyleSheet.create({
   container: {
@@ -153,6 +161,6 @@ const styles = StyleSheet.create({
   linkText: {
     color: Colors.primary,
   },
-})
+});
 
-export default Register
+export default Register;
