@@ -10,7 +10,13 @@ import PrimaryButton from "@/components/ui/PrimaryButton"
 const AppointmentSuccess = () => {
   const navigation = useNavigation()
   const handlePress = () => {
-    navigation.navigate("home")
+    navigation.navigate("home", {
+      doctorAvatar: doctorAvatar,
+      doctorName: doctorName,
+      doctorCategory: doctorCategory,
+      appointmentDate: appointmentDate,
+      appointmentTime: appointmentTime,
+    })
   }
 
   const route = useRoute()

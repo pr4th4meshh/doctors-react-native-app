@@ -50,6 +50,15 @@ const PagesLayout = () => {
           }}
         />
         <Stack.Screen
+          name="notifications"
+          options={{
+            headerShown: true,
+            headerTitle: "Notifications",
+            headerTitleAlign: "center",
+            headerTitleStyle: { fontFamily: "Manrope" },
+          }}
+        />
+        <Stack.Screen
           name="appointment-success"
           options={{
             headerShown: false,
