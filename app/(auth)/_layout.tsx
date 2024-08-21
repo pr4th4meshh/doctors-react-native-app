@@ -29,7 +29,14 @@ const AuthLayout = () => {
         <Stack.Screen
           name="welcome"
           options={{
-            headerShown: false
+            headerShown: false,
+          }}
+        />
+        <Stack.Screen
+          name="enter-otp"
+          options={{
+            headerShown: true,
+            headerTitle: ""
           }}
         />
       </Stack>

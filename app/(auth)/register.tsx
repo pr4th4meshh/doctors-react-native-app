@@ -11,6 +11,7 @@ import { CountryPicker } from "react-native-country-codes-picker";
 import PrimaryButton from "@/components/ui/PrimaryButton";
 import Colors from "@/constants/Colors";
 import { useRouter } from "expo-router";
+import { useNavigation } from "@react-navigation/native";
 
 const Register = () => {
   const [phoneNumber, setPhoneNumber] = useState("");
@@ -32,6 +33,11 @@ const Register = () => {
   };
 
   const disabled = phoneNumber.length !== 10;
+
+  const navigation = useNavigation()
+  const handlePress = () => {
+    navigation.navigate("enter-otp", {phoneNumber: phoneNumber})
+  }
 
   return (
     <View style={styles.container}>
@@ -74,7 +80,7 @@ const Register = () => {
       <View style={styles.bottomContainer}>
         <PrimaryButton
           disabled={disabled}
-          onPress={() => router.push("/welcome")}
+          onPress={handlePress}
           text="Continue"
           buttonStyle={[
             styles.button,
