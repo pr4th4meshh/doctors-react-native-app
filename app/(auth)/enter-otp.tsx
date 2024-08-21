@@ -1,7 +1,7 @@
 import { View, Text, StyleSheet } from "react-native"
 import React from "react"
 import CustomText from "@/components/ui/CustomText"
-import { useRoute } from "@react-navigation/native"
+import { useNavigation, useRoute } from "@react-navigation/native"
 import Colors from "@/constants/Colors"
 import OTPTextView from "react-native-otp-textinput"
 import PrimaryButton from "@/components/ui/PrimaryButton"
@@ -11,6 +11,10 @@ const EnterOtp = () => {
   const { phoneNumber } = route.params
   const handleOTPChange = (otp: string) => {
     console.log(otp)
+  }
+const navigation = useNavigation()
+  const handlePress = () => {
+    navigation.navigate("register-user")
   }
   return (
     <View style={{ flex: 1, backgroundColor: "white", padding: 15 }}>
@@ -36,7 +40,7 @@ const EnterOtp = () => {
       />
 
       <View style={styles.bottomContainer}>
-        <PrimaryButton text="Continue" />
+        <PrimaryButton onPress={handlePress} text="Continue" />
 
         <CustomText style={styles.termsText}>
           By signing up or logging in, I accept the app's{" "}

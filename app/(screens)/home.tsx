@@ -12,7 +12,7 @@ import AppointmentCard from "@/components/ui/AppointmentCard";
 import { useRoute } from "@react-navigation/native";
 
 const Home = () => {
-  const username = "Prathamesh";
+  const staticUsername = "Prathamesh";
   const route = useRoute();
   const {
     doctorAvatar,
@@ -20,6 +20,7 @@ const Home = () => {
     doctorCategory,
     appointmentDate,
     appointmentTime,
+    username
   } = route.params;
 
   // Data for FlatList
@@ -41,7 +42,7 @@ const Home = () => {
         return (
           <View style={styles.headerContainer}>
             <View>
-              <CustomText style={{ fontSize: 26 }}>Hi {username}!</CustomText>
+              <CustomText style={{ fontSize: 26 }}>Hi {username || staticUsername}!</CustomText>
               <CustomText style={{ fontSize: 13, color: "#939396" }}>
                 We hope you're healthy & fine
               </CustomText>

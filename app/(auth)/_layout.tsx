@@ -1,6 +1,4 @@
-import { Ionicons } from "@expo/vector-icons"
 import { Stack } from "expo-router"
-import { StatusBar } from "expo-status-bar"
 
 const AuthLayout = () => {
   return (
@@ -34,6 +32,13 @@ const AuthLayout = () => {
         />
         <Stack.Screen
           name="enter-otp"
+          options={{
+            headerShown: true,
+            headerTitle: ""
+          }}
+        />
+                <Stack.Screen
+          name="register-user"
           options={{
             headerShown: true,
             headerTitle: ""
