@@ -1,13 +1,12 @@
 import { View, Image, TouchableOpacity, StyleSheet } from "react-native"
 import React, { useState } from "react"
-import { RouteProp, useRoute } from "@react-navigation/native"
+import { RouteProp, useNavigation, useRoute } from "@react-navigation/native"
 import { DoctorsData } from "@/constants/Data"
 import DoctorInformationCard from "@/components/ui/DoctorInformationCard"
 import CustomText from "@/components/ui/CustomText"
 import { Ionicons } from "@expo/vector-icons"
 import Colors from "@/constants/Colors"
 import CircleCheckbox from "@/components/ui/CircleCheckbox"
-import { router, useNavigation } from "expo-router"
 
 type RootStackParamList = {
   payment: {
@@ -29,6 +28,16 @@ const Payment = () => {
 
   const handlePaymentMethodChange = (method: string) => {
     setSelectedPaymentMethod(method)
+  }
+
+  const handlePress = () => {
+    navigation.navigate("appointment-success", {
+      doctorAvatar: doctor?.avatar,
+      doctorName: doctor?.name,
+      doctorCategory: doctor?.category,
+      appointmentDate: appointmentDate,
+      appointmentTime: appointmentTime
+    })
   }
 
   return (
@@ -133,6 +142,7 @@ const Payment = () => {
             Total: INR {doctor?.price}
           </CustomText>
           <TouchableOpacity
+            onPress={handlePress}
             style={{
               backgroundColor: Colors.primary,
               height: 48,

@@ -49,6 +49,12 @@ const PagesLayout = () => {
             headerTitleStyle: { fontFamily: "Manrope" },
           }}
         />
+        <Stack.Screen
+          name="appointment-success"
+          options={{
+            headerShown: false,
+          }}
+        />
       </Stack>
     </>
   )

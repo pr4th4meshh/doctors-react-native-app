@@ -1,12 +1,12 @@
-import { TabBarIcon } from "@/components/navigation/TabBarIcon"
-import Colors from "@/constants/Colors"
-import { Ionicons } from "@expo/vector-icons"
-import { Stack, Tabs } from "expo-router"
-import { StatusBar } from "react-native"
+import { TabBarIcon } from "@/components/navigation/TabBarIcon";
+import Colors from "@/constants/Colors";
+import { Tabs } from "expo-router";
+import { StatusBar } from "react-native";
 
-const AuthLayout = () => {
+const ScreensLayout = () => {
   return (
     <>
+      <StatusBar backgroundColor="white" barStyle="dark-content" />
       <Tabs
         screenOptions={{
           tabBarActiveTintColor: Colors.primary,
@@ -44,7 +44,7 @@ const AuthLayout = () => {
             ),
             tabBarLabelStyle: { fontFamily: "Manrope", fontSize: 12 },
           }}
-        />{" "}
+        />
         <Tabs.Screen
           name="history"
           options={{
@@ -57,14 +57,16 @@ const AuthLayout = () => {
             ),
             tabBarLabelStyle: { fontFamily: "Manrope", fontSize: 12 },
           }}
-        />{" "}
+        />
         <Tabs.Screen
           name="chat"
           options={{
             title: "Chat",
             tabBarIcon: ({ color, focused }) => (
               <TabBarIcon
-                name={focused ? "chatbox-ellipses" : "chatbox-ellipses-outline"}
+                name={
+                  focused ? "chatbox-ellipses" : "chatbox-ellipses-outline"
+                }
                 color={color}
               />
             ),
@@ -85,9 +87,8 @@ const AuthLayout = () => {
           }}
         />
       </Tabs>
-      <StatusBar backgroundColor="white" barStyle="dark-content" />
     </>
-  )
-}
+  );
+};
 
-export default AuthLayout
+export default ScreensLayout;
