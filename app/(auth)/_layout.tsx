@@ -1,4 +1,5 @@
 import { Stack } from "expo-router"
+import Toast from "react-native-toast-message"
 
 const AuthLayout = () => {
   return (
@@ -34,17 +35,18 @@ const AuthLayout = () => {
           name="enter-otp"
           options={{
             headerShown: true,
-            headerTitle: ""
+            headerTitle: "",
           }}
         />
-                <Stack.Screen
+        <Stack.Screen
           name="register-user"
           options={{
             headerShown: true,
-            headerTitle: ""
+            headerTitle: "",
           }}
         />
       </Stack>
+      <Toast />
     </>
   )
 }
