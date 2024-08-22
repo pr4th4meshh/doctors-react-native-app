@@ -19,7 +19,7 @@ const SignupTab = () => {
       <Image
         style={{ width: width, flex: 0.4 }}
         resizeMode="cover"
-        source={require("../../assets/images/onboarding-1.jpg")}
+        source={require("../../assets/images/auth-screen-image.jpg")}
       />
       <View style={{ flex: 0.6, padding: 15 }}>
         <CustomText style={{ fontWeight: "semibold", fontSize: 32 }}>
