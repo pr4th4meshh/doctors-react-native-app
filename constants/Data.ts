@@ -1,5 +1,3 @@
-import iconSet from "@expo/vector-icons/build/Fontisto"
-
 export const ActionsCardData = [
   {
     id: "1",
@@ -56,7 +54,7 @@ export const Categories = [
   },
   {
     id: "4",
-    icon: "🤌",
+    icon: "🙂",
     title: "Dermato-veneorologis",
   },
   {

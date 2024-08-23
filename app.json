@@ -4,13 +4,12 @@
     "slug": "doctors-react-native",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/images/si-sehat-logo.png",
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
     "splash": {
-      "image": "./assets/images/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "image": "./assets/images/si-sehat-splash.png",
+      "resizeMode": "cover"
     },
     "ios": {
       "supportsTablet": true
