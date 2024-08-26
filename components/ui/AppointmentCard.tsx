@@ -1,11 +1,11 @@
-import { View, Text } from "react-native"
+import { View, Text, Image, ImageProps } from "react-native"
 import React from "react"
 import Colors from "@/constants/Colors"
 import CustomText from "./CustomText"
 import { Ionicons } from "@expo/vector-icons"
 
 interface IAppointmentCard {
-  doctorAvatar: string
+  doctorAvatar: ImageProps
   doctorName: string
   doctorCategory: string
   appointmentDate: string
@@ -33,7 +33,19 @@ const AppointmentCard = ({
     >
       {/* Doctor info */}
       <View style={{ flexDirection: "row", alignItems: "center" }}>
-        <Text style={{ fontSize: 48, paddingRight: 10 }}>{doctorAvatar}</Text>
+        <Image
+          source={doctorAvatar}
+          style={{
+            borderWidth: 1,
+            borderColor: "white",
+            borderRadius: 10,
+            height: 54,
+            width: 54,
+            objectFit: "contain",
+            marginRight: 10,
+            backgroundColor: "white"
+          }}
+        />
         <View style={{ flexDirection: "column" }}>
           <CustomText style={{ fontSize: 18, color: "white" }}>
             {doctorName}

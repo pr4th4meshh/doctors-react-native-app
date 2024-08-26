@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, TouchableOpacity } from "react-native"
+import { View, Text, StyleSheet, TouchableOpacity, Image, ImageProps } from "react-native"
 import React from "react"
 import CustomText from "./CustomText"
 import { Ionicons } from "@expo/vector-icons"
@@ -6,7 +6,7 @@ import { NavigationProp, useNavigation } from "@react-navigation/native"
 
 interface ICard {
   id: string
-  icon: string
+  icon: ImageProps
   title: string
   ratings: number
   price: number
@@ -36,7 +36,7 @@ const DoctorInformationCard = ({
   return (
     <TouchableOpacity onPress={handlePress} key={id} style={styles.cardContainer}>
       <View style={styles.iconContainer}>
-        <Text style={styles.iconStyle}>{icon}</Text>
+        <Image source={icon} style={styles.iconStyle}/>
 
         <View style={{ flexDirection: "column", gap: 2 }}>
           <CustomText style={{ fontSize: 16 }}>{title}</CustomText>
@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
     marginBottom: 4,
   },
   iconStyle: {
-    fontSize: 36,
+    objectFit: "contain",
     backgroundColor: "white",
     borderRadius: 30,
     borderWidth: 1,

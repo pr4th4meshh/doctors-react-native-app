@@ -1,9 +1,11 @@
 import React, { useRef } from "react"
-import { View, StyleSheet, Image, TouchableOpacity } from "react-native"
+import { View, StyleSheet, Image, TouchableOpacity, Dimensions } from "react-native"
 import Swiper from "react-native-swiper"
 import { useRouter } from "expo-router"
 import Colors from "@/constants/Colors"
 import CustomText from "@/components/ui/CustomText"
+
+const { width, height } = Dimensions.get("window")
 
 const Index = () => {
   const swiperRef = useRef(null)
@@ -105,8 +107,8 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   image: {
-    width: "100%",
-    height: 460,
+    width: width,
+    height: height * 0.55,
     position: "absolute",
     top: 0,
     marginBottom: 240,
@@ -114,7 +116,7 @@ const styles = StyleSheet.create({
   textContainer: {
     position: "absolute",
     top: 500,
-    paddingHorizontal: 15,
+    marginHorizontal: 15,
   },
   title: {
     fontSize: 28,
@@ -141,13 +143,15 @@ const styles = StyleSheet.create({
   buttonsContainer: {
     flexDirection: "row",
     justifyContent: "space-between",
-    width: "80%",
+    width: "90%",
     position: "absolute",
     bottom: 50,
+    paddingHorizontal: 20,
   },
   buttonText: {
-    fontSize: 16,
+    fontSize: 18,
     color: Colors.primary,
+    flexWrap: "nowrap"
   },
 })
 

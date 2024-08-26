@@ -82,7 +82,7 @@ export const Categories = [
 export const DoctorsData = [
   {
     id: "1",
-    avatar: "❤️",
+    avatar: require("@/assets/images/doctor-image-1.png"),
     name: "Dr. John Smith",
     category: "Ear, Nose & Throat",
     price: 50,
@@ -134,7 +134,7 @@ export const DoctorsData = [
   },
   {
     id: "2",
-    avatar: "❤️",
+    avatar: require("@/assets/images/doctor-image-2.png"),
     name: "Dr. Sarah Johnson",
     category: "Psychiatrist",
     price: 100,
@@ -186,7 +186,8 @@ export const DoctorsData = [
   },
   {
     id: "3",
-    avatar: "❤️",
+    avatar: require("@/assets/images/doctor-image-1.png"),
+
     name: "Dr. Emily Davis",
     category: "Dentist",
     price: 75,
@@ -238,7 +239,8 @@ export const DoctorsData = [
   },
   {
     id: "4",
-    avatar: "❤️",
+    avatar: require("@/assets/images/doctor-image-2.png"),
+
     name: "Dr. Michael Brown",
     category: "Dermato-veneorologis",
     price: 80,
@@ -290,7 +292,8 @@ export const DoctorsData = [
   },
   {
     id: "5",
-    avatar: "❤️",
+    avatar: require("@/assets/images/doctor-image-1.png"),
+
     name: "Dr. Olivia Martinez",
     category: "Cold & Cough",
     price: 40,
@@ -342,7 +345,8 @@ export const DoctorsData = [
   },
   {
     id: "6",
-    avatar: "❤️",
+    avatar: require("@/assets/images/doctor-image-2.png"),
+
     name: "Dr. Linda Williams",
     category: "Menstrual Consulting",
     price: 60,

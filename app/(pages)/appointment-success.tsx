@@ -52,7 +52,17 @@ const AppointmentSuccess = () => {
 
           {/* doctor view */}
           <View style={styles.doctorView}>
-            <Text style={{ fontSize: 36 }}>{doctorAvatar}</Text>
+            <Image
+              source={doctorAvatar}
+              style={{
+                borderWidth: 1,
+                borderColor: "gray",
+                borderRadius: 10,
+                height: 54,
+                width: 54,
+                objectFit: "contain",
+              }}
+            />
             <CustomText style={{ fontSize: 18 }}>{doctorName}</CustomText>
             <CustomText style={{ color: "gray", fontSize: 16 }}>
               {doctorCategory}

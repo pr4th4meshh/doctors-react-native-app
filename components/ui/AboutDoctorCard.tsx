@@ -1,11 +1,11 @@
-import { View, Text, StyleSheet } from "react-native"
+import { View, Text, StyleSheet, ImageProps } from "react-native"
 import React from "react"
 import DoctorInformationCard from "./DoctorInformationCard"
 import CustomText from "./CustomText"
 
 interface IDoctorCard {
   id: string
-  avatar: string
+  avatar: ImageProps
   title: string
   price: number
   ratings: number
